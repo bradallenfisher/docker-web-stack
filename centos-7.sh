@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Some simple preparation work
+yum install git
+
 # Install Docker Engine on RHEL Based Systems
 sudo yum update
 sudo curl -fsSL https://get.docker.com/ | sh

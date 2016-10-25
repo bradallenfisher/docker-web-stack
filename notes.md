@@ -14,8 +14,13 @@ docker login
 docker push yourname/newimage
 ```
 
-## Docker Stop all images
+## Docker Stop/Delete all containers
 ``` shell
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
+```
+
+## Docker Stop/Delete all images
+``` shell
+docker rmi $(docker images -q)
 ```

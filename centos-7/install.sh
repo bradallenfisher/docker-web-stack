@@ -4,7 +4,7 @@
 yum install git
 
 # Install Docker Engine on RHEL Based Systems
-sudo yum update
+sudo yum update -y
 sudo curl -fsSL https://get.docker.com/ | sh
 sudo systemctl enable docker.service
 sudo systemctl start docker

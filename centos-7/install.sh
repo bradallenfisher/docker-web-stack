@@ -13,5 +13,6 @@ sudo systemctl start docker
 sudo curl -L https://github.com/docker/compose/releases/download/1.9.0-rc1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-# Start the docker compose file
-source ../docker.sh
+# Compose the infrastructure
+cd ../
+docker-compose up -d

@@ -23,14 +23,10 @@ services:
       DB_HOST: db:3306
       DB_PASSWORD: password
   php:
-    depends_on:
-      - db
-    image: bradallenfisher/apache2.4:latest
+    image: bradallenfisher/phpfpm5.6:latest
+    expose:
+      - "9000"
+    volumes:
+      - ./elmsln:/var/www/elmsln
     links:
       - db
-    ports:
-      - "9000:9000"
-    restart: always
-    environment:
-      DB_HOST: db:3306
-      DB_PASSWORD: password
